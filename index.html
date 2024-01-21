@@ -35,10 +35,45 @@
             padding: 0.5em 1em;
             margin: 0 1em;
             border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
         }
 
         section {
             padding: 2em;
+        }
+
+        .featured-recipes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            padding: 1em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        article:hover {
+            transform: scale(1.02);
+        }
+
+        img {
+            display: flex;
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 8px;
         }
 
         footer {
@@ -55,26 +90,50 @@
 
 <body>
 
-    <header>
-        <h1>World Vegetarian</h1>
-    </header>
+<header>
+    <h1>World Vegetarian</h1>
+</header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Recipes</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact</a>
-    </nav>
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Contact</a>
+</nav>
 
-    <section>
-        <!-- Your content goes here -->
-        <h2>Welcome to World Vegetarian!</h2>
-        <p>Discover delicious vegetarian recipes and explore the world of plant-based goodness.</p>
-    </section>
+<section>
+    <h2>Welcome to World Vegetarian!</h2>
+    <p>Discover delicious vegetarian recipes and explore the world of plant-based goodness.</p>
+    <h2>Featured Recipes</h2>
+</section>
+<section class="featured-recipes">
+    <article>
+        <h3>Paneer Biryani</h3>
+        <img src="public/images/paneer-biriyani.JPG" alt="Paneer Biryani">
+        <p>Aromatic and flavorful, Paneer Biryani is a delightful Indian rice dish with fragrant basmati rice, paneer, and spices.</p>
+    </article>
 
-    <footer>
-        &copy; 2024 World Vegetarian. All rights reserved.
-    </footer>
+    <article>
+        <h3>Kadai Paneer</h3>
+        <img src="public/images/kadai.HEIC" alt="Kadai Paneer">
+        <p>Indulge in the rich flavors of kadai paneer, a popular North Indian dish with paneer, bell peppers, and aromatic spices.</p>
+    </article>
+
+    <article>
+        <h3>Gajar Halva</h3>
+        <img src="public/images/gajar.jpeg" alt="Gajar Halva">
+        <p>Satisfy your sweet tooth with gajar halva, a delicious carrot-based dessert infused with cardamom and garnished with nuts.</p>
+    </article>
+
+    <article>
+        <h3>Moong Salad</h3>
+        <img src="public/images/moong.jpeg" alt="Moong Salad">
+        <p>Enjoy a healthy moong salad with sprouted moong beans, fresh veggies, and a zesty dressing. A nutritious and tasty option.</p>
+    </article>
+
+</section>
+
+<footer>
+    &copy; 2024 World Vegetarian. All rights reserved.
+</footer>
 
 </body>
 
